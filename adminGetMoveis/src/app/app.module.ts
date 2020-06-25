@@ -8,6 +8,9 @@ import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     CadastrarProdutoComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProdutosComponent,
+    EditarComponent,
+    DeletarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,165 @@
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <!-- <div class="col-md-4 ">
+
+            <div class="card border-0" style="width: 18rem;">
+                <div class="d-flex justify-content-center">
+                    <img class="img-responsive" src= "assets/pessoal.jpg" alt="Imagem Gabriel" class="card-img-top rounded-circle w-75">
+                </div>
+                
+
+                <div class="card-body">
+                  <h5 class="card-title text-center">Gabriel Fernando</h5>
+
+                  <p class="card-text text-center">Em aprendizado continuo, ajudo comunidades e pessoas com desenvolvimento Web, orientação a objetos e banco de dados.Em transição de carreira, uso minhas experiencias anteriores em infraestrutura par agregar valor na nova profissão que almejo, tais como atendimento ao cliente, entender problemas, trabalhar sobre pressão e entender a solicitação do ciente. </p>
+
+                  <a href="https://www.linkedin.com/in/gabriel-fernando-mcsilva/" class="btn btn-outline-info d-flex justify-content-center mb-3" target="_blank">LinkedIn</a>
+
+                  <a href="https://github.com/bielmoita" class="btn btn-outline-dark d-flex justify-content-center" target="_blank">GitHub</a>
+
+                  <hr class="mt-4 mb-4">
+
+                  <h6 class="mb-3 text-monospace text-center">Pesquisar por título</h6>
+                  <input type="text" class="form-control mb-3 w-100" placeholder="Pesquisar postagem" [(ngModel)]="titulo">
+                  <button class="btn btn-outline-warning w-100" type="button" (click)=pesquisarPorTitulo() >Pesquisar</button>
+
+                </div>
+              </div>
+            
+        </div> -->
+
+    <div class="col-md-12">
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="row">
+            <!-- <div class="col-md-5 register-left">
+                    <img [src]=seta alt="Seta">
+                    <h3>Junte-se a Getmóveis</h3>
+                    <button type="button" class="btn btn-primary">Sobre Nós</button>
+                </div> -->
+            <div class="col-md-7 register-right">
+              <h2>Cadastre o produto a ser ofertado ao cliente</h2>
+              <form>
+                <label for="#">Produto</label>
+                <select class="form-control" id="opcao" required>
+                  <option value="1" disabled selected
+                    >Escolha sua categoria</option
+                  >
+                  <option value="2">Sofá</option>
+                  <option value="3">Cadeira</option>
+                  <option value="4">Mesa</option>
+                  <option value="5">Poltrona</option>
+                </select>
+                <br />
+
+                <div class="register-form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      placeholder="Nome do produto"
+                      class="form-control"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      placeholder="Modelo do Produto"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name=""
+                      placeholder="Cor do produto"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      name=""
+                      placeholder="quantidade"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="money"
+                      name=""
+                      placeholder="Valor do Produto"
+                      class="form-control"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Registrar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      
+
+      <hr class="mt-5 mb-5" />
+
+      <h3 class="text-monospace text-center mb-5">Nossos Produtos</h3>
+
+      <!-- <div *ngIf="alerta">
+        <div class="alert alert-success" role="alert">
+          Postagem apagada com sucesso!
+        </div>
+      </div> -->
+
+      <div
+        class="card mb-4"
+        
+      >
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-8">
+              <h5 class="card-title">{{ produto.nome }}</h5>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-end">
+              <button
+                class="btn btn-outline-info mr-3"
+                [routerLink]="['/editar', produto.id]"
+              >
+                Editar
+              </button>
+
+              <button
+                class="btn btn-outline-danger"
+                [routerLink]="['/deletar', produto.id]"
+              >
+                Apagar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <p class="card-text">{{ produto.imagem }}</p>
+          <p class="card-text">{{ produto.categoria }}</p>
+          <hr>
+          <p class="card-text">{{ produto.id }}</p>
+          <p class="card-text">{{ produto.modelo }}</p>
+          <p class="card-text">{{ produto.cor }}</p>
+          <p class="card-text">{{ produto.valor }}</p>
+          <p class="card-text">{{ produto.qtdestoque }}</p>
+          <p class="card-text">{{ produto.descricaoProduto }}</p>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
